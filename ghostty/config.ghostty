@@ -1,0 +1,24 @@
+# --- Appearance ---
+theme = Gruvbox Dark
+font-family = Maple Mono NF
+font-size = 12
+font-feature = +ss01, +ss02, +ss03, +cv01, +ss05
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# --- Window Layout ---
+window-padding-x = 12
+window-padding-y = 12
+window-decoration = true
+confirm-close-surface = false
+window-theme = dark
+
+# --- Performance & Shell ---
+command = /usr/bin/fish
+mouse-hide-while-typing = true
+
+# --- Keybinds ---
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+shift+q=quit
+keybind = ctrl+shift+r=reload_config

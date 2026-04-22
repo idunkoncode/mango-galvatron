@@ -1,0 +1,3 @@
+[submodule "mango"]
+	path = mango
+	url = https://github.com/DreamMaoMao/mango-config.git

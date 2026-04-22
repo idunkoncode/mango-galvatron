@@ -1,0 +1,75 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Gruvbox Dark Hard Palette
+# bg0: #1d2021 | bg1: #282828 | bg2: #3c3836
+# red: #fb4934 | green: #b8bb26 | yellow: #fabd2f
+# blue: #83a598 | purple: #d3869b | aqua: #8ec07c | orange: #fe8019
+
+format = """
+[░▒▓](#fe8019)\
+[  ](bg:#fe8019 fg:#1d2021)\
+[](bg:#fabd2f fg:#fe8019)\
+$directory\
+[](fg:#fabd2f bg:#b8bb26)\
+$git_branch\
+$git_status\
+[](fg:#b8bb26 bg:#83a598)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#83a598 bg:#3c3836)\
+$time\
+[ ](fg:#3c3836)\
+\n$character"""
+
+[directory]
+style = "fg:#1d2021 bg:#fabd2f"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#b8bb26"
+format = '[[ $symbol $branch ](fg:#1d2021 bg:#b8bb26)]($style)'
+
+[git_status]
+style = "bg:#b8bb26"
+format = '[[($all_status$ahead_behind )](fg:#1d2021 bg:#b8bb26)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#83a598"
+format = '[[ $symbol ($version) ](fg:#1d2021 bg:#83a598)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#83a598"
+format = '[[ $symbol ($version) ](fg:#1d2021 bg:#83a598)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#83a598"
+format = '[[ $symbol ($version) ](fg:#1d2021 bg:#83a598)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#83a598"
+format = '[[ $symbol ($version) ](fg:#1d2021 bg:#83a598)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#3c3836"
+format = '[[  $time ](fg:#ebdbb2 bg:#3c3836)]($style)'
+
+[character]
+success_symbol = "[󰄛](bold green)"
+error_symbol = "[󰄛](bold red)"
